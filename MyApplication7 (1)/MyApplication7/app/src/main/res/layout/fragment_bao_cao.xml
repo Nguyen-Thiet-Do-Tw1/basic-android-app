@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_thang"
+                    android:layout_width="196dp"
+                    android:layout_height="51dp"
+                    android:gravity="center"
+                    android:textAlignment="center">
+
+                </Spinner>
+
+                <Spinner
+                    android:id="@+id/spinner_nam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center">
+
+                </Spinner>
+            </LinearLayout>
+
+            <!-- Hạn mức hiện tại -->
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#C6C6C6"
+                android:gravity="center"
+                android:text="Khoản Chi"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/tvCurrentLimit"
+                    android:layout_width="301dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="Hạn mức: 10,000,000 VNĐ"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnAddLimit"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvCurrentLimit"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_edit" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtTongChi"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Tổng Chi: "
+                android:textColor="#000000" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart_Chi"
+                android:layout_width="match_parent"
+                android:layout_height="249dp">
+
+            </com.github.mikephil.charting.charts.PieChart>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#C6C6C6"
+                android:gravity="center"
+                android:text="Khoản Thu"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart_Thu"
+                android:layout_width="match_parent"
+                android:layout_height="223dp">
+
+            </com.github.mikephil.charting.charts.PieChart>
+
+            <TextView
+                android:id="@+id/txtTongThu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Tổng Thu: "
+                android:textColor="#000000" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#C6C6C6"
+                android:gravity="center"
+                android:text="Tổng quan"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <com.github.mikephil.charting.charts.CombinedChart
+                android:id="@+id/pieChart_Chi_Thu"
+                android:layout_width="match_parent"
+                android:layout_height="213dp">
+
+            </com.github.mikephil.charting.charts.CombinedChart>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

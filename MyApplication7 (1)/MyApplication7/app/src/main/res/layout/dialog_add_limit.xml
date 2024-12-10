@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <!-- Chọn Tháng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Tháng"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <NumberPicker
+            android:id="@+id/npMonth"
+            android:layout_width="81dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Năm"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <NumberPicker
+            android:id="@+id/npYear"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- Chọn Năm -->
+
+    <!-- Nhập Số Tiền -->
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:backgroundTint="#DDDDDD"
+        android:hint="Nhập Số Tiền"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
+</LinearLayout>

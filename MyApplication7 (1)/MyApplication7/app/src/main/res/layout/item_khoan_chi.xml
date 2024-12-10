@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/icon_loaichi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtNote_chi"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:autoSizeMinTextSize="8sp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/icon_loaichi"
+            app:layout_constraintTop_toBottomOf="@+id/txtLoaichi" />
+
+        <TextView
+            android:id="@+id/txtDate_chi"
+            android:layout_width="100dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/icon_loaichi"
+            app:layout_constraintTop_toBottomOf="@+id/txtNote_chi" />
+
+        <TextView
+            android:id="@+id/txtLoaichi"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/icon_loaichi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtKhoanchi"
+            android:layout_width="147dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textColor="#F81111"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/txtNote_chi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_edit_chi"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-64dp"
+            android:layout_marginTop="44dp"
+            android:background="#F6F2F4"
+            app:layout_constraintStart_toEndOf="@+id/txtKhoanchi"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/btn_del_chi"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="44dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_edit_chi"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_del" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
